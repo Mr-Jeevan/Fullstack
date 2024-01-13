@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+    background-color: #37517e;
+    opacity: 1;
+    z-index: 1000;
+    
+
+}.header .navbar .collapse form .btn {
+    border-radius: 50px;
+}
+/* header closed */
+
+
+/* banner opens */
+.banner {
+    padding-top: 100px;
+    background-color: #37517e;
+    
+
+}
+ .banner .container .button .btn{
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.banner .container h2 {
+    font-weight: 1000;
+}
+
+.banner .container .button a {
+    text-decoration: none;
+}
+
+.banner .container .row .col-xl-6 {
+    font-size: 24px;
+}
+
+.banner .container .button a i {
+    font-size: 30px;
+    position: relative;
+    top: 6px;
+}
+
+main .banner .container .row .img .animated {
+    width: 100%;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(20px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+/* banner closed */
+
+/* about starting */
+
+#about  {
+    background-color: rgb(243, 245, 250);
+    
+}
+
+#about .container .row #accordion .card .card-header h5 .button:hover {
+    text-decoration: none !important;
+}
+
+
+/* about closing */
+
+/* services starting */
+
+
+
+#services {
+    background-color: rgb(248, 249, 250);
+}
+
+#services h1::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+#services h1::before{
+    content: "";
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: -50px;
+    left: calc(50% - 60px);
+}
+
+#services .container .row .card .card-body h5 {
+    color: #37517e;
+    transition: .3s ease-in-out;
+
+}
+
+.fa-basketball {
+    font-size: 30px;
+    color: rgb(57, 177, 227);
+}
+
+#services .container .row .col-xl-3 {
+    transition: .5s ease-in-out;
+}
+
+#services .container .row .col-xl-3:hover {
+    transform: translateY(-15px);
+      
+    
+}
+
+#services .container .row .col-xl-3:hover h5{
+    color: rgb(57, 177, 227); 
+}
+/* services closing */
+
+
+/* call opening */
+#call {
+    color: white;
+    background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url(/assets/image/bg/cta-bg.jpg) fixed center center;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+#call .btn {
+    border-radius: 50px;
+}
+/* call closed */
+
+/* team opening */
+.team {
+    background-color: #f3f5fa;
+}
+.team-img {
+    border-radius: 50px;
+    width: 30%;
+}
+
+
+.team-after::after {
+    content: ''; /* empty string */
+    display: block; /* make it a block element */
+    width: 50px; /* full width */
+    height: 1px; /* desired height of the line */
+    background: grey; /* desired color of the line */
+    margin-top: 10px;
+}
+
+.team .card-title {
+    font-weight: 500;
+    color: #37517e;
+}
+
+.team .fa-brands {
+    background-color: #f3f5fa;
+    color: #37517e;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.team .container .col-xl-6{
+    transition: .3s ease-in-out;
+}
+
+.team .container .col-xl-6:hover {
+    transform: translateY(-15px);
+}
+/* team closing */
+
+/* pricing opening */
+
+#pricing h1::after{
+    content: "";
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+}
+
+#pricing h1::before{
+    content: "";
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: -50px;
+    left: calc(50% - 60px);
+}
+
+#pricing .container .row ul {
+    list-style-type: none;
+}
+
+#pricing .container .row ul li::before {
+    content: '✓';
+    display: inline-block;
+    color: lightgreen;
+
+}
+
+.price-dol {
+    font-size: 50px;
+}
+
+
+#pricing .container .row ul li {
+    line-height: 50px;
+}
+
+.pricing-solo-2{
+    border-top: 3px solid #47b2e4;
+}
+
+.pricing-btn {
+    border-radius: 50px;
+}
+
+/* contact starting */
+.fa-location-dot, .fa-envelope, .fa-mobile {
+    padding: 10px 12px;
+    border-radius: 50px;
+    color: white;
+    position: relative;
+    top: 50px;
+    left: 0px;
+
+}
+
+#contact .container .row .loaction p {
+    font-size: 14px;
+}
+
+footer {
+    background-color: #37517e;
+    color: white;
+    height: 70px;
+
+}
+
+.footer-a {
+    text-decoration: none;
+    color: #00a0eb;
+    transition: .5s ease-in-out;
+}
+
+.footer-a:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+.fa-heart {
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+.footer-a:hover i {
+    opacity: 1;
+}
