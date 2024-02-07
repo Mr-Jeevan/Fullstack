@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extraction Using JS</title>
+
+    <link rel="stylesheet" href="./assets/bootstrap-4.0.0-dist/css/bootstrap.min.css">
+
+    <script defer src="./assets/bootstrap-4.0.0-dist/jquery/jquery.js"></script>
+
+    <script defer src="./assets/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+
+        .for_use {
+            color: grey;
+        }
+
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="row  my-5">
+        <form class="col-12 d-flex flex-column align-items-center my-5" action="">
+
+        <div class="">
+            
+            <textarea class="border-info" name="" id="emailarea" cols="70" rows="10"></textarea>
+        </div>
+        <div class="d-flex"><div>
+            <input type="button" class="btn-info m-3" value="Get Email" onclick="get_email()">
+        </div>
+        <div>
+            <input type="button" class="btn-info m-3" value="Get Name" onclick="get_name()">
+        </div>
+
+        <div>
+            <input type="button" class="btn-info m-3" value="Get Link" onclick="get_link()">
+        </div>
+    </div>
+
+        
+
+
+    </form>
+    </div>
+
+    <div class="dlex ml-auto mr-5 w-25">
+        <p class="for_use">
+            <h4>For Use</h4>
+            lorem ipsum jeevan@gmail.com arsh@gmail.com arsh@gmail.com arshudhjklpoiuytrem@gmail.com https://www.example.com https://www.example.com https://www.w3resource.com/javascript/form/email-validation.php https://www.w3resource.com/javascript/form/email-validation.php https://www.zzzz7777lllll.com/javascript/form/email-validation.php 
+        </p>
+    </div>
+    
+    <script>
+
+        // get email
+        function get_email() {
+            let textArea = document.getElementById('emailarea').value;
+
+            let email = textArea.split(' ');
+
+            // console.log(email);
+
+            let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            let mails = [];
+
+            for (let i = 0; i < email.length; i++) {
+
+                let validEmail = emailFormat.test(email[i]);
+                // console.log(validEmail);
+
+                if (validEmail) {
+                    mails.push(email[i]);
+
+                }
+            }
+            // console.log(mails);
+
+            let noDuplicates = [];
+
+            for (let j = 0; j < mails.length; j++) {
+
+                if (noDuplicates.indexOf(mails[j]) == -1) {
+                    noDuplicates.push(mails[j]);
+                }
+            }
+            console.log('email =',noDuplicates);
+            
+
+        }
+
+        // get name
+        function get_name() {
+            let textArea = document.getElementById('emailarea');
+
+            let individual = textArea.value;
+
+            let email = individual.split(' ');
+
+            let emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            let mails = [];
+
+
+            for (let i = 0; i < email.length; i++) {
+
+                let validEmail = emailFormat.test(email[i]);
+
+
+                if (validEmail) {
+                    mails.push(email[i]);
+
+                }
+            }
+            // console.log(mails);
+
+            let noDuplicates = [];
+            for (let j = 0; j < mails.length; j++) {
+                if (noDuplicates.indexOf(mails[j]) == -1) {
+                    noDuplicates.push(mails[j]);
+                }
+            }
+
+            let printName = [];
+
+            for (let k = 0; k < noDuplicates.length; k++) {
+                let nameOnly = noDuplicates[k].split('@');
+
+                // console.log(nameOnly[0]);
+
+                if (nameOnly[0].length >= 15) {
+                    printName.push(nameOnly[0].substr(0, 15) + '....');
+
+                } else {
+                    printName.push(nameOnly[0].substr(0, 15));
+                }
+            }
+            console.log('name =', printName);
+
+
+
+        }
+
+        // // get links
+        function get_link() {
+            let textArea = document.getElementById('emailarea').value;
+
+            let link = textArea.split(' ');
+
+            // console.log(link)
+
+            let linkformat = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+
+
+            let links = [];
+
+            for (let i = 0; i < link.length; i++) {
+
+                let validLink = linkformat.test(link[i]);
+                
+                if (validLink) {
+                    links.push(link[i]);
+                }
+            }
+        //    console.log(links);
+
+           let noDuplicates = [];
+   
+           for (let j = 0; j < links.length; j++) {
+               if (noDuplicates.indexOf(links[j]) == -1) {
+                   noDuplicates.push(links[j]);
+               }
+           }
+           console.log('links =',noDuplicates);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
